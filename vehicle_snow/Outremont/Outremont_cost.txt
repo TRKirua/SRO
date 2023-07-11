@@ -1,0 +1,10 @@
+Avec une déneigeuse de TYPE II
+
+Distance minimale à parcourir : 44345 m
+
+Durée d'utilisation de la déneigeuse : 2.22 h
+Prix par km des 8 premières heures de la déneigeuse : 57.72 €
+Prix par km du reste des heures de la déneigeuse : 0.0 €
+Prix des journées de location de la déneigeuse : 800 €
+
+Prix total de la déneigeuse : 857.72 €

@@ -1,0 +1,10 @@
+Pour toute la région de Montreal:
+
+Distance minimale à parcourir : 4220,182 km
+
+Durée d'utilisation du drone : 60.29 h
+Prix par km du drone: 42.2 €
+Prix des journées de location du drone : 300 €
+
+
+Prix total du drone : 342.2 €

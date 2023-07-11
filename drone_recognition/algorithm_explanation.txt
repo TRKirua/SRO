@@ -1,0 +1,23 @@
+Notre code Python(algorithm_functions.py) met en œuvre un algorithme connu sous le nom de problème du facteur chinois (également connu sous le nom de problème d'inspection des itinéraires ou de tournée du facteur), qui vise à trouver l'itinéraire le plus court possible qui visite chaque arête d'un graphe au moins une fois, et qui revient au sommet d'origine.
+
+Expliquons chaque fonction et bibliothèques utilisées dans le code :
+
+numpy : Il s'agit d'une bibliothèque du langage de programmation Python, qui prend en charge les matrices et les tableaux multidimensionnels de grande taille, ainsi qu'une vaste collection de fonctions mathématiques de haut niveau permettant d'opérer sur ces tableaux.
+
+scipy.sparse : Le module scipy.sparse fournit des structures de données pour le stockage efficace des matrices sparse, ainsi que certaines opérations pour les matrices sparse. csr_matrix est l'une de ces structures de données qui est utilisée pour des opérations arithmétiques efficaces, le découpage en colonnes, et les produits matrice-vecteur.
+
+scipy.sparse.csgraph : Ce module fournit un ensemble de routines de théorie des graphes. shortest_path est utilisé pour trouver les chemins les plus courts dans le graphe à partir d'un sommet vers tous les autres en utilisant l'algorithme de Dijkstra ou de Floyd-Warshall, tandis que connected_components trouve et étiquette les composantes connectées dans le graphe.
+
+scipy.optimize : Ce module fournit plusieurs algorithmes d'optimisation couramment utilisés. linear_sum_assignment résout le problème de l'affectation de la somme linéaire (également connu sous le nom de problème de correspondance de poids minimum dans les graphes bipartis) via la méthode hongroise.
+
+itertools : Ce module met en œuvre un certain nombre de blocs de construction d'itérateurs. combinations est utilisé pour générer toutes les combinaisons possibles d'une liste d'éléments.
+
+La fonction principale chinese_postman prend un graphe en entrée, qui est un tableau numpy 2D où l'entrée à l'index [i, j] représente le poids de l'arête entre les sommets i et j. La fonction vérifie d'abord si le graphe est un graphe à deux dimensions.
+
+La fonction vérifie d'abord si le graphe est connecté ; si ce n'est pas le cas, elle lève une ValueError. Elle recherche ensuite tous les sommets ayant un degré impair (c'est-à-dire les sommets connectés à un nombre impair d'arêtes) et, s'il n'y en a pas, elle renvoie simplement la somme des poids de toutes les arêtes du graphe.
+
+S'il y a des sommets de degré impair, la fonction trouve le chemin le plus court entre toutes les paires de ces sommets à l'aide de la fonction shortest_path. Elle utilise ensuite la fonction linear_sum_assignment pour trouver une correspondance parfaite de poids minimal entre ces sommets, c'est-à-dire un ensemble d'arêtes sans sommets communs qui minimise la somme des poids des arêtes.
+
+Enfin, il renvoie la somme des poids de toutes les arêtes du graphe plus la somme des poids des arêtes dans la correspondance parfaite de poids minimum.
+
+La complexité de cet algorithme est principalement déterminée par les fonctions shortest_path et linear_sum_assignment. La fonction shortest_path a une complexité temporelle de O(V^3) où V est le nombre de sommets du graphe, tandis que linear_sum_assignment a une complexité temporelle de O(V^3).
