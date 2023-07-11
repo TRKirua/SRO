@@ -13,3 +13,9 @@ Enter the name of the town/neighbourhood you want in main.py on line 56.
 
 ## STEP 3 - Execution :
 Simply run the python script main.py.
+
+
+## Credits :
+ * [Enes Ekici](https://github.com/TRKirua)
+ * [Emon Barberis](https://github.com/EmonBar)
+ * [Samy Abou-al-tout](https://github.com/locovamos)
