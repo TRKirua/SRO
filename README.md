@@ -1,17 +1,15 @@
-# INSTRUCTIONS D'INSTALLATION ET D'UTILISATION
+# INSTALLATION AND OPERATING INSTRUCTIONS
+
+This project is a prototype for determining the minimum distance a snowplough needs to travel to clear a neighbourhood of snow.
 
 
+## STEP 1 - Installing the python libraries :
+To download our project:
+Follow the instructions of this website : https://osmnx.readthedocs.io/en/stable/
 
-ETAPE 1 - Installation des librairies python :
-
-Suivre les instructions en suivant ce lien : https://osmnx.readthedocs.io/en/stable/
-
-
-ETAPE 2 - Choix du lieu :
-
-Ecrire le nom de la ville/du quartier souhaité dans le fichier main.py à la ligne 56.
+## STEP 2 - Choice of location :
+Enter the name of the town/neighbourhood you want in main.py on line 56.
 
 
-ETAPE 3 - Exécution :
-
-Exécuter simplement le script python main.py.
+## STEP 3 - Execution :
+Simply run the python script main.py.
