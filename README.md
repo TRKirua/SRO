@@ -1,6 +1,11 @@
 # INSTALLATION AND OPERATING INSTRUCTIONS
 
 This project is a prototype for determining the minimum distance a snowplough needs to travel to clear a neighbourhood of snow.
+We decided to use a type II snowplough which costs are :
+- Fixed cost: €800/day
+- Hourly cost for the first 8 hours: €1.3/h
+- Hourly cost after the first 8 hours: 1.5 €/h
+- Average speed: 20 km/h
 
 
 ## STEP 1 - Installing the python libraries :
