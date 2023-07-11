@@ -1,10 +1,27 @@
+--- FRANCAIS ---
+
 Avec une déneigeuse de type II
 
 Distance minimale à parcourir : 134131 m
 
 Durée d'utilisation de la déneigeuse : 6.71 h
-Prix par km des 8 premières heures de la déneigeuse : 174.46 €
-Prix par km du reste des heures de la déneigeuse : 0.0 €
+Prix des km parcourus des 8 premières heures de la déneigeuse : 174.46 €
+Prix des km parcourus du reste des heures de la déneigeuse : 0.0 €
 Prix des journées de location de la déneigeuse : 800 €
 
 Prix total de la déneigeuse : 974.46 €
+
+
+
+--- ENGLISH ---
+
+With a type II snow plough
+
+Minimum distance covered: 134131 m
+
+Length of time the snow plough was used: 6.71 h
+Price of covered km during the first 8 hours of snow clearance: €174.46
+Price of covered km for the remaining hours of snow clearance: €0.0
+Price of day(s) of snow plough hire: €800
+
+Total cost of the snow plough: €974.46

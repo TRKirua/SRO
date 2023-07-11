@@ -1,3 +1,5 @@
+--- FRANCAIS ---
+
 Explication de l'algorithme principal:
 
 
@@ -24,3 +26,34 @@ S'il y a des sommets de degré impair, la fonction trouve le chemin le plus cour
 Enfin, il renvoie la somme des poids de toutes les arêtes du graphe plus la somme des poids des arêtes dans la correspondance parfaite de poids minimum.
 
 La complexité de cet algorithme est principalement déterminée par les fonctions shortest_path et linear_sum_assignment. La fonction shortest_path a une complexité temporelle de O(V^3) où V est le nombre de sommets du graphe, tandis que linear_sum_assignment a une complexité temporelle de O(V^3).
+
+
+
+--- ENGLISH ---
+
+Explanation of the main algorithm:
+
+
+Our Python code (in the file algorithm_functions.py) implements an algorithm known as the Chinese postman problem (also known as the route inspection or postman tour problem), which aims to find the shortest possible route that visits each edge of a graph at least once, and returns to the original vertex.
+
+Let's explain each function and library used in the code:
+
+numpy: This is a library in the Python programming language, which supports matrices and large multidimensional arrays, as well as a large collection of high-level mathematical functions for operating on these arrays.
+
+scipy.sparse: The scipy.sparse module provides data structures for efficient storage of sparse matrices, as well as certain operations for sparse matrices. csr_matrix is one of these data structures which is used for efficient arithmetic operations, column splitting, and matrix-vector products.
+
+scipy.sparse.csgraph: This module provides a set of graph theory routines. shortest_path is used to find the shortest paths in the graph from one vertex to all others using the Dijkstra or Floyd-Warshall algorithm, while connected_components finds and labels connected components in the graph.
+
+scipy.optimize: This module provides several commonly used optimisation algorithms. linear_sum_assignment solves the linear sum assignment problem (also known as the minimum weight matching problem in bipartite graphs) using the Hungarian method.
+
+itertools: This module implements a number of iterator building blocks. Combinations are used to generate all possible combinations of a list of elements.
+
+The main function chinese_postman takes a graph as input, which is a 2D numpy array where the entry at index [i, j] represents the weight of the edge between vertices i and j. The function first checks whether the graph is a two-dimensional graph.
+
+The function first checks whether the graph is connected; if it isn't, it throws a ValueError. It then searches for all vertices with an odd degree (i.e. vertices connected to an odd number of edges) and, if there are none, simply returns the sum of the weights of all the edges in the graph.
+
+If there are odd-degree vertices, the function finds the shortest path between all pairs of these vertices using the shortest_path function. It then uses the linear_sum_assignment function to find a perfect match of minimum weight between these vertices, i.e. a set of edges with no common vertices that minimises the sum of the edge weights.
+
+Finally, it returns the sum of the weights of all the edges in the graph plus the sum of the weights of the edges in the minimum-weight perfect match.
+
+The complexity of this algorithm is mainly determined by the shortest_path and linear_sum_assignment functions. The shortest_path function has a time complexity of O(V^3) where V is the number of vertices in the graph, while linear_sum_assignment has a time complexity of O(V^3).
